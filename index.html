@@ -19,11 +19,14 @@
 </head>
 
 <body>
+    <input type="checkbox" name="close menu" aria-label="close menu" role="button" id="close-menu" class="close-menu">
+    <label for="close-menu" title="close-menu" class="close-menu-label"></label>
     <header class="menu white-bg">
         <div class="main-content menu-content">
-            <h1><a href="#home">LOGO</a></h1>
+            <h1 onclick="getElementById('close-menu').checked=false;"><a href="#home">LOGO</a></h1>
             <nav>
-                <ul>
+                <ul onclick="getElementById('close-menu').checked=false;"> <!-- /* Permite visualizar as opções do menu
+                    quando clicado */ -->
                     <li><a href="#intro">Intro</a></li>
                     <li><a href="#top3">My Grid</a></li>
                     <li><a href="#gallery">Gallery</a></li>
@@ -235,6 +238,7 @@
     <footer class="white-bg footer" id="footer">
         <p><a href="" target="_blank">Desenvolvido por Edvaldo Caculo</a></p>
     </footer>
+    <a href="#home" class="back-to-top">Top</a>
 </body>
 
 </html>
