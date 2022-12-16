@@ -142,6 +142,22 @@ a{
     margin: 0;
     padding: 3rem;
 }
+.back-to-top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: white;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #0a1128;
+    border: 0.1rem solid #0a1128;
+
+}
 /*Fazendo o break point, colocando pra o tamanho mobile*/
 @media (max-width: 80rem){
     .intro-content,.grid {
@@ -157,5 +173,54 @@ a{
     }
     .grid-one-content{
         display: block;
+    }
+    .menu{
+        bottom: 0;
+        text-align: center;
+    }
+    .menu-content, .menu ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu-content{
+        height: 100vh;
+    }
+    .menu{
+        display: none;
+    }
+    .close-menu{
+        display: none;
+    }
+    .close-menu-label::after {
+        content: '☰';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background-color: #0a1128;
+        color: white;
+        padding: 0.5rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        font-size: 3rem;
+        cursor: pointer;
+    }
+    .close-menu:checked ~.menu{
+        display: block;
+    }
+    .close-menu:checked ~.close-menu-label::after{
+        content: 'X';
+    }
+    .menu-space{
+        display: none;
+    }
+    h1{
+        font-size: 2rem;
+    }
+
+    .intro-image img {
+        width: 100%;
     }
 }
